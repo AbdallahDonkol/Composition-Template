@@ -1,0 +1,66 @@
+//import variables file
+@use "../helpers/variables" as *;
+//import mixins file 
+@use "../helpers/mixins" as *;
+
+body{
+    font-family: 'Cairo', sans-serif;
+    counter-reset: services;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+// small media queries 
+.container{
+    @include mediaQueries(small){
+        width: 750px;
+    }
+}
+//medium media queries 
+.container{
+    @include mediaQueries(medium){
+        width: 970px;
+    }
+}
+//large media queries
+.container{
+    @include mediaQueries(large){
+        width: 1170px;
+    }
+}
+// special heading
+.special-heading{
+    font-size: 25px;
+    margin: 50px auto 30px;
+    text-align: center;
+    color: white;
+    background-color: $redColor;
+    border: 1px solid $redColor;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: $main-transition;
+    &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 23px;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 1px;
+        background-color: $grey-color;
+        z-index: -1;
+    }
+    &:hover{
+        color: black;
+        background-color: white;
+        border: 1px solid $redColor;
+        border-radius: 10px;
+    }
+}

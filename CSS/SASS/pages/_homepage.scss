@@ -1,0 +1,190 @@
+//import variables file
+@use "../helpers/variables" as *;
+//import mixins file 
+@use "../helpers/mixins" as *;
+//import grid file 
+@use "../layout/grid" as *;
+//import global rules file 
+@use "../pages/global" as *;
+//import header file 
+@use "../layout/header" as *;
+//import footer file
+@use "../layout/footer" as *;
+//----------------------------------------------------
+/*start homepage*/  
+.homepage{
+    padding: 15px 0;
+    position: relative;
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    q{
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        font-style: italic;
+        line-height: 1.6;
+        color: $grey-color;
+        margin-bottom: 20px;
+    }
+    img{
+        max-width: 100%;
+        width: 100%;
+        height: 350px;
+        @include mediaQueries(mobile){
+            height: 300px;
+        }
+    }
+    .bullets{
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            
+        li{
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #ddd;
+            margin-right: 5px;
+            cursor: pointer;
+            &.active,
+            &:hover{
+                background-color: white;
+                border: 1px solid $grey-color;
+            }
+        }
+    }
+}
+/*end homepage*/  
+/*start services*/
+.services{
+    padding: 15px 0;
+    position: relative;
+    .services-content{
+        @include grid(300px);
+        text-align: center;
+        .box{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            .head{
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+                text-align: center;
+                justify-content: center;
+                i{
+                    font-size: 20px;
+                }
+                h3{
+                    font-size: 25px;
+                    margin-left: 15px;
+                }
+            }
+            p{
+                color: $grey-color;
+                font-size: 17px;
+                line-height: 1.2;
+            }
+            a{
+                text-decoration: none;
+                margin-top: 15px;
+                font-size: 15px;
+                color: $redColor;
+                font-weight: bold;
+                transition: $main-transition;
+                &:hover{
+                    color: black;
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+}
+/*end services*/
+/*start players*/
+.players{
+    padding: 15px 0;
+    .players-content{
+        @include grid(200px);
+        .box{
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+            overflow: hidden;
+            padding-bottom: 20px;
+            position: relative;
+            transition: $main-transition;
+            &:hover{
+                transform: translateY(-10px);
+                box-shadow: 0 2px 15px rgb(0 0 0 / 30%);
+                a{
+                    margin: 15px 0 15px 10px;
+                    color: black;
+                    background-color: $redColor;
+                    border-radius: 10px;
+                }
+            }
+            img{
+                max-width: 100%;
+                @include mediaQueries(mobile){
+                    width: 100%;
+                }
+            }
+            h4{
+                padding: 10px;
+                font-weight: 400;
+                span{
+                    font-weight: bold;
+                }
+            }
+            p{
+                color: $paragraph-color;
+                font-size: 17px;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+            a{
+                text-decoration: none;
+                padding: 0 10px;
+                margin: 15px 0 15px 10px;
+                font-size: 17px;
+                color: $redColor;
+                font-weight: bold;
+                transition: $main-transition;
+            }
+        }
+    }
+}
+/*end players*/
+/*start gallery*/
+.gallery{
+    padding: 15px 0 20px;
+    margin-bottom: 20px;
+    .gallery-content{
+        @include grid(300px);
+        .card{
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+            .image{
+                overflow: hidden;
+                position: relative;
+                }
+                img{
+                    width: 100%;
+                    max-width: 100%;
+                    transition: $main-transition;
+                    &:hover{
+                        transform: rotate(5deg) scale(1.1);
+                    }
+                }
+            }
+        }
+    } 
+/*end gallery*/

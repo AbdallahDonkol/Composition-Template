@@ -1,0 +1,114 @@
+//import variables file
+@use "../helpers/variables" as *;
+//import mixins file 
+@use "../helpers/mixins" as *;
+/*start footer*/
+footer{
+    padding-top: 50px;
+    background-color: #ccc;
+    .container{
+        @include grid(300px);
+    }
+    .blog{
+        display: flex;
+        flex-direction: column;
+        .box{
+            display: flex;
+            margin-top: 20px;
+            img{
+                width: 100px;
+                height: 100px;
+                max-width: 100%;
+            }
+            .text{
+                margin-left: 15px;
+                h4{
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                    color: $redColor;
+                }
+                p{
+                    color: $grey-color;
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}
+footer{
+    .info{
+        margin-left: 40px;
+        ul{
+            margin-top: 20px;
+            li{
+                color: $grey-color;
+                font-size: 17px;
+                a{
+                    text-decoration: none;
+                    color: $redColor;
+                    font-weight: bold;
+                }
+            }
+            .tel{
+                margin-top: 15px;
+            }
+        }
+        h4{
+            margin: 15px 0 5px;
+            font-size: 19px;
+        }
+        p{
+            color: $grey-color;
+        }
+    }
+}
+footer{
+    form{
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        input[type="text"],
+        input[type="email"],
+        textarea{
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            caret-color: $redColor;
+            &:focus{
+                outline: none;
+            }
+        }
+        button{
+            width: 30%;
+            background-color: $redColor;
+            border: none;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+            text-transform: uppercase;
+            transition: $main-transition;
+            border: 1px solid $redColor;
+            &:hover{
+                color: black;
+                background-color: white;
+                border: 1px solid $redColor;
+            }
+        }
+    }
+}
+footer{
+    .copy-right{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 60px;
+        border-top: 1px solid $grey-color;
+        @include mediaQueries(mobile){
+            padding: 15px 20px;
+        }
+    }
+}
+/*end footer*/
