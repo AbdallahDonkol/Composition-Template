@@ -363,8 +363,8 @@ footer .copy-right {
   display: flex;
 }
 .homepage .bullets li {
-  width: 15px;
-  height: 15px;
+  width: 17px;
+  height: 17px;
   border-radius: 50%;
   background-color: #ddd;
   margin-right: 5px;
@@ -380,6 +380,7 @@ footer .copy-right {
 .services {
   padding: 15px 0;
   position: relative;
+  margin-top: 10px;
 }
 .services .services-content {
   display: -ms-grid;
