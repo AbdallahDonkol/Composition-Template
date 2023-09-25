@@ -46,8 +46,8 @@
             display: flex;
             
         li{
-            width: 15px;
-            height: 15px;
+            width: 17px;
+            height: 17px;
             border-radius: 50%;
             background-color: #ddd;
             margin-right: 5px;
@@ -65,6 +65,7 @@
 .services{
     padding: 15px 0;
     position: relative;
+    margin-top: 10px;
     .services-content{
         @include grid(300px);
         text-align: center;
